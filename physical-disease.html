@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physical Diseases</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        .disease-list {
+            margin: 20px 0;
+        }
+
+        .disease {
+            cursor: pointer;
+            margin-bottom: 10px;
+            padding: 15px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .disease-details {
+            display: none;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .disease-details p {
+            margin: 0;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Physical Diseases</h1>
+        <div class="disease-list">
+            <div class="disease" onclick="toggleDetails('disease1')">
+                <h3>1. Flu</h3>
+                <div id="disease1" class="disease-details">
+                    <p><strong>Symptoms:</strong> Fever, chills, cough, sore throat, runny or stuffy nose, muscle or body aches, headache, fatigue.</p>
+                    <p><strong>Causes:</strong> Influenza viruses.</p>
+                    <p><strong>Treatment:</strong> Rest, fluids, over-the-counter medications, antiviral drugs in severe cases.</p>
+                </div>
+            </div>
+
+            <div class="disease" onclick="toggleDetails('disease2')">
+                <h3>2. Cold</h3>
+                <div id="disease2" class="disease-details">
+                    <p><strong>Symptoms:</strong> Runny nose, sneezing, sore throat, cough, congestion.</p>
+                    <p><strong>Causes:</strong> Rhinoviruses.</p>
+                    <p><strong>Treatment:</strong> Rest, fluids, over-the-counter medications for symptom relief.</p>
+                </div>
+            </div>
+
+            <div class="disease" onclick="toggleDetails('disease3')">
+                <h3>3. Asthma</h3>
+                <div id="disease3" class="disease-details">
+                    <p><strong>Symptoms:</strong> Wheezing, shortness of breath, chest tightness, coughing.</p>
+                    <p><strong>Causes:</strong> Airway inflammation and hyperreactivity.</p>
+                    <p><strong>Treatment:</strong> Inhaled corticosteroids, bronchodilators, avoiding triggers.</p>
+                </div>
+            </div>
+
+            <div class="disease" onclick="toggleDetails('disease4')">
+                <h3>4. Diabetes Mellitus</h3>
+                <div id="disease4" class="disease-details">
+                    <p><strong>Symptoms:</strong> Excessive thirst, frequent urination, extreme fatigue, blurred vision.</p>
+                    <p><strong>Causes:</strong> Insulin resistance (Type 2) or autoimmune destruction of insulin-producing cells (Type 1).</p>
+                    <p><strong>Treatment:</strong> Insulin therapy, oral medications, lifestyle changes, monitoring blood sugar levels.</p>
+                </div>
+            </div>
+
+            <div class="disease" onclick="toggleDetails('disease5')">
+                <h3>5. Hypertension</h3>
+                <div id="disease5" class="disease-details">
+                    <p><strong>Symptoms:</strong> Often asymptomatic; severe cases may include headaches, shortness of breath, nosebleeds.</p>
+                    <p><strong>Causes:</strong> Lifestyle factors, genetic predisposition, kidney disease.</p>
+                    <p><strong>Treatment:</strong> Lifestyle changes, antihypertensive medications, regular monitoring.</p>
+                </div>
+            </div>
+
+            <div class="disease" onclick="toggleDetails('disease6')">
+                <h3>6. Osteoarthritis</h3>
+                <div id="disease6" class="disease-details">
+                    <p><strong>Symptoms:</strong> Joint pain, stiffness, swelling, decreased range of motion.</p>
+                    <p><strong>Causes:</strong> Joint wear and tear, genetic factors, previous joint injuries.</p>
+                    <p><strong>Treatment:</strong> Pain management, physical therapy, joint injections, and in severe cases, surgery.</p>
+                </div>
+            </div>
+
+            <div class="disease" onclick="toggleDetails('disease7')">
+                <h3>7. Rheumatoid Arthritis</h3>
+                <div id="disease7" class="disease-details">
+                    <p><strong>Symptoms:</strong> Joint pain, morning stiffness, joint swelling, fatigue.</p>
+                    <p><strong>Causes:</strong> Autoimmune disorder where the immune system attacks the joints.</p>
+                    <p><strong>Treatment:</strong> Disease-modifying antirheumatic drugs (DMARDs), pain relief medications, physical therapy.</p>
+                </div>
+            </div>
+
+            <div class="disease" onclick="toggleDetails('disease8')">
+                <h3>8. Migraine</h3>
+                <div id="disease8" class="disease-details">
+                    <p><strong>Symptoms:</strong> Severe headache, nausea, sensitivity to light and sound.</p>
+                    <p><strong>Causes:</strong> Genetic factors, hormonal changes, environmental triggers.</p>
+                    <p><strong>Treatment:</strong> Pain relief medications, lifestyle changes, avoiding triggers.</p>
+                </div>
+            </div>
+
+            <div class="disease" onclick="toggleDetails('disease9')">
+                <h3>9. Gastroesophageal Reflux Disease (GERD)</h3>
+                <div id="disease9" class="disease-details">
+                    <p><strong>Symptoms:</strong> Heartburn, regurgitation, chest pain, difficulty swallowing.</p>
+                    <p><strong>Causes:</strong> Weakness of the lower esophageal sphincter, acid reflux from the stomach.</p>
+                    <p><strong>Treatment:</strong> Antacids, H2-receptor antagonists, proton pump inhibitors, dietary changes.</p>
+                </div>
+            </div>
+
+            <div class="disease" onclick="toggleDetails('disease10')">
+                <h3>10. Chronic Obstructive Pulmonary Disease (COPD)</h3>
+                <div id="disease10" class="disease-details">
+                    <p><strong>Symptoms:</strong> Shortness of breath, chronic cough, wheezing, mucus production.</p>
+                    <p><strong>Causes:</strong> Long-term exposure to irritating gases or particulate matter, smoking being the primary cause.</p>
+                    <p><strong>Treatment:</strong> Smoking cessation, bronchodilators, corticosteroids, oxygen therapy.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleDetails(diseaseId) {
+            var details = document.getElementById(diseaseId);
+            details.style.display = details.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>

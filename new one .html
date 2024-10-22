@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #e9ecef; /* Light background */
+        }
+
+        header {
+            background-color: #007bff; /* Bootstrap primary color */
+            color: #fff;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem; /* Increased size */
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 30px; /* Increased spacing */
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s; /* Smooth transition */
+        }
+
+        nav ul li a:hover {
+            color: #ffc107; /* Bootstrap warning color on hover */
+        }
+
+        .hero {
+            background-image: url('images/1.jpg'); /* Ensure image path is correct */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            padding: 120px 0; /* Increased padding */
+            position: relative; /* For pseudo-elements */
+        }
+
+        .hero h2 {
+            font-size: 3rem; /* Increased size */
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Shadow for better visibility */
+        }
+
+        .hero p {
+            font-size: 1.5rem; /* Increased size */
+            margin-bottom: 30px; /* Increased spacing */
+        }
+
+        .search-bar {
+            margin: 20px auto;
+            max-width: 700px; /* Increased width */
+            display: flex;
+            justify-content: center;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 15px; /* Increased padding */
+            border: 1px solid #007bff; /* Match header color */
+            border-radius: 5px 0 0 5px;
+            font-size: 1.1rem; /* Larger font size */
+        }
+
+        .search-bar button {
+            padding: 15px;
+            background-color: #ffc107; /* Bootstrap warning color */
+            color: #fff;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            font-size: 1.1rem; /* Larger font size */
+            transition: background-color 0.3s; /* Smooth transition */
+        }
+
+        .search-bar button:hover {
+            background-color: #e0a800; /* Darker shade on hover */
+        }
+
+        .disease-list {
+            padding: 40px 0;
+        }
+
+        .disease-box {
+            position: relative;
+            color: #fff;
+            text-align: center;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Deeper shadow */
+            cursor: pointer;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.3s; /* Scale on hover */
+        }
+
+        .disease-box:hover {
+            transform: scale(1.05); /* Slight zoom effect */
+        }
+
+        .disease-box h2 {
+            position: relative;
+            z-index: 2;
+            font-size: 2rem; /* Increased size */
+            background-color: rgba(0, 0, 0, 0.6); /* Darker overlay */
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        .contact {
+            background-color: #007bff; /* Match header */
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .about {
+            background-color: #f9f9f9;
+            padding: 40px 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0; /* Increased padding */
+        }
+
+        .form-group {
+            margin-bottom: 20px; /* Increased spacing */
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px; /* Increased padding */
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem; /* Larger font size */
+        }
+
+        .form-group button {
+            padding: 12px 25px; /* Increased padding */
+            background-color: #ffc107; /* Match search button */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1rem; /* Larger font size */
+            transition: background-color 0.3s; /* Smooth transition */
+        }
+
+        .form-group button:hover {
+            background-color: #e0a800; /* Darker shade on hover */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <h1>VitalVista</h1>
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#diseases">Disease</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="sign-in.html">Sign In</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Welcome to VitalVista!</h2>
+            <p>Discover a world of knowledge on health, beauty, psychology, and social life.</p>
+        </div>
+    </section>
+
+    <section class="search-bar">
+        <div class="container">
+            <input type="text" placeholder="Search for health tips">
+            <button type="button">Search</button>
+        </div>
+    </section>
+
+    <section id="diseases" class="disease-list">
+        <div class="container">
+            <div class="row">
+                <!-- Maintain Health Box -->
+                <div class="col-12 col-md-4 mb-3">
+                    <div class="disease-box" id="maintain-health" onclick="window.location.href='maintain-health.html'">
+                        <div class="overlay"></div>
+                        <h2>Maintain Health</h2>
+                    </div>
+                </div>
+
+                <!-- About Disease Box -->
+                <div class="col-12 col-md-4 mb-3">
+                    <div class="disease-box" id="about-disease" onclick="window.location.href='about disease.html'">
+                        <div class="overlay"></div>
+                        <h2>About Disease</h2>
+                    </div>
+                </div>
+
+                <!-- Psychology Box -->
+                <div class="col-12 col-md-4 mb-3">
+                    <div class="disease-box" id="psychology" onclick="window.location.href='psychology.html'">
+                        <div class="overlay"></div>
+                        <h2>Psychology</h2>
+                    </div>
+                </div>
+
+                <!-- Beauty Box -->
+                <div class="col-12 col-md-6 mb-3">
+                    <div class="disease-box" id="beauty" onclick="window.location.href='beauty.html'">
+                        <div class="overlay"></div>
+                        <h2>Beauty</h2>
+                    </div>
+                </div>
+
+                <!-- Communication and Social Life Box -->
+                <div class="col-12 col-md-6 mb-3">
+                    <div class="disease-box" id="communication" onclick="window.location.href='communication.html'">
+                        <div class="overlay"></div>
+                        <h2>Communication and Social Life</h2>
+                    </div>
+                </div>
+            </div>

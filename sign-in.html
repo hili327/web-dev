@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In and Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        .container h2 {
+            margin: 0 0 20px;
+            text-align: center;
+        }
+        .container input[type="text"],
+        .container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .container button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background: #007BFF;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .container button:hover {
+            background: #0056b3;
+        }
+        .container p {
+            text-align: center;
+        }
+        .container p a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container" id="signInContainer">
+    <h2>Sign In</h2>
+    <input type="text" id="signInEmail" placeholder="Email">
+    <input type="password" id="signInPassword" placeholder="Password">
+    <button onclick="signIn()">Sign In</button>
+    <p>Already have an account? <a href="#" onclick="showLogin()">Log In</a></p>
+</div>
+
+<div class="container" id="verificationContainer" style="display:none;">
+    <h2>Verification</h2>
+    <input type="text" id="verificationCode" placeholder="Enter Verification Code">
+    <button onclick="verifyCode()">Verify</button>
+</div>
+
+<div class="container" id="loginContainer" style="display:none;">
+    <h2>Log In</h2>
+    <input type="text" id="loginEmail" placeholder="Email">
+    <input type="password" id="loginPassword" placeholder="Password">
+    <button onclick="logIn()">Log In</button>
+    <p>Don't have an account? <a href="#" onclick="showSignIn()">Sign In</a></p>
+</div>
+
+<script>
+    const users = {};
+
+    function signIn() {
+        const email = document.getElementById('signInEmail').value;
+        const password = document.getElementById('signInPassword').value;
+        
+        if (!validateEmail(email)) {
+            alert('Please enter a valid email address.');
+            return;
+        }
+
+        fetch('/send-verification-code', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ email })
+        }).then(response => response.json()).then(data => {
+            if (data.success) {
+                users[email] = { password, code: data.code };
+                showVerification();
+            } else {
+                alert('Error sending verification code.');
+            }
+        });
+    }
+
+    function verifyCode() {
+        const email = document.getElementById('signInEmail').value;
+        const code = document.getElementById('verificationCode').value;
+        
+        if (users[email] && users[email].code === code) {
+            alert('Verification successful. Please log in.');
+            showLogin();
+        } else {
+            alert('Invalid verification code.');
+        }
+    }
+
+    function logIn() {
+        const email = document.getElementById('loginEmail').value;
+        const password = document.getElementById('loginPassword').value;
+        
+        if (email in users && users[email].password === password) {
+            alert('Login successful. Welcome!');
+        } else {
+            alert('Invalid credentials. Please try again.');
+        }
+    }
+
+    function validateEmail(email) {
+        const regex = /^[a-zA-Z0-9._%+-]+@(gmail\.com|outlook\.com)$/;
+        return regex.test(email);
+    }
+
+    function showSignIn() {
+        document.getElementById('signInContainer').style.display = 'block';
+        document.getElementById('verificationContainer').style.display = 'none';
+        document.getElementById('loginContainer').style.display = 'none';
+    }
+
+    function showVerification() {
+        document.getElementById('signInContainer').style.display = 'none';
+        document.getElementById('verificationContainer').style.display = 'block';
+        document.getElementById('loginContainer').style.display = 'none';
+    }
+
+    function showLogin() {
+        document.getElementById('signInContainer').style.display = 'none';
+        document.getElementById('verificationContainer').style.display = 'none';
+        document.getElementById('loginContainer').style.display = 'block';
+    }
+</script>
+
+</body>
+</html>

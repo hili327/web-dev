@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physical Exercises</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bolder;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        .content {
+            padding: 40px 0;
+        }
+
+        .exercise-box {
+            background-color: rgb(127, 251, 255);
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .exercise-box h2 {
+            margin-bottom: 10px;
+        }
+
+        .exercise-list {
+            display: none;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <h1>Physical Exercises</h1>
+                <ul>
+                    <li><a href="trying web.html">Home</a></li>
+                    <li><a href="physical-exercises.html">Physical Exercises</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="content">
+        <div class="container">
+            <h2 class="text-center">Physical Exercises</h2>
+            <div class="exercise-box" onclick="toggleList('mentalHealthExercises')">
+                <h2>To Maintain Mental Health</h2>
+            </div>
+            <div id="mentalHealthExercises" class="exercise-list">
+                <h3>Recommended Exercises</h3>
+                <h4>For Kids</h4>
+                <ul>
+                    <li>Yoga for kids</li>
+                    <li>Meditation with stories</li>
+                    <li>Breathing exercises</li>
+                </ul>
+                <h4>For Adults</h4>
+                <ul>
+                    <li>Meditation</li>
+                    <li>Mindfulness walking</li>
+                    <li>Tai Chi</li>
+                </ul>
+                <h4>For Aged People</h4>
+                <ul>
+                    <li>Gentle Yoga</li>
+                    <li>Breathing exercises</li>
+                    <li>Mindful gardening</li>
+                </ul>
+            </div>
+
+            <div class="exercise-box" onclick="toggleList('physicalHealthExercises')">
+                <h2>To Maintain Physical Health</h2>
+            </div>
+            <div id="physicalHealthExercises" class="exercise-list">
+                <h3>Recommended Exercises</h3>
+                <h4>For Kids</h4>
+                <ul>
+                    <li>Running</li>
+                    <li>Swimming</li>
+                    <li>Outdoor games</li>
+                </ul>
+                <h4>For Adults</h4>
+                <ul>
+                    <li>Strength training</li>
+                    <li>HIIT workouts</li>
+                    <li>Cycling</li>
+                </ul>
+                <h4>For Aged People</h4>
+                <ul>
+                    <li>Walking</li>
+                    <li>Light weight lifting</li>
+                    <li>Swimming</li>
+                </ul>
+            </div>
+
+            <div class="exercise-box" onclick="toggleList('overallHealthExercises')">
+                <h2>For Overall Health</h2>
+            </div>
+            <div id="overallHealthExercises" class="exercise-list">
+                <h3>Recommended Exercises</h3>
+                <h4>For Kids</h4>
+                <ul>
+                    <li>Sports</li>
+                    <li>Dancing</li>
+                    <li>Playground activities</li>
+                </ul>
+                <h4>For Adults</h4>
+                <ul>
+                    <li>Jogging</li>
+                    <li>Yoga</li>
+                    <li>Swimming</li>
+                </ul>
+                <h4>For Aged People</h4>
+                <ul>
+                    <li>Water aerobics</li>
+                    <li>Chair yoga</li>
+                    <li>Walking</li>
+                </ul>
+            </div>
+
+            <div class="exercise-box" onclick="toggleList('sexualHealthExercises')">
+                <h2>For Sexual Health</h2>
+            </div>
+            <div id="sexualHealthExercises" class="exercise-list">
+                <h3>Recommended Exercises</h3>
+                <ul>
+                    <li>Kegels</li>
+                    <li>Pelvic tilts</li>
+                    <li>Bridge</li>
+                    <li>Cardio exercises</li>
+                    <li>Strength training</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Physical Exercises. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleList(listId) {
+            var list = document.getElementById(listId);
+            list.style.display = list.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>

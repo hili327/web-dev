@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bolder;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        .hero .container{
+            background-image: url('images/1.jpg'); /* Updated image path */
+            background-size: 100%;
+            background-position: center;
+            color: #615555;
+            text-align: center;
+            padding: 20px;
+            height: 400px;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+        }
+
+        .content {
+            padding: 40px 0;
+        }
+
+        .disease-list {
+            padding: 40px 0;
+        }
+
+        .search-bar {
+            margin: 20px auto;
+            max-width: 600px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px 0 0 5px;
+        }
+
+        .search-bar button {
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+        }
+
+        .disease-box {
+            position: relative;
+            color: #fff;
+            text-align: center;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+            background-color: #000; /* Fallback color */
+        }
+
+        .disease-box h2 {
+            position: relative;
+            z-index: 2;
+            font-size: 1.5rem;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        .contact {
+            background-color: #333;
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .about {
+            background-color: #f9f9f9;
+            padding: 40px 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-group button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <h1>VitalVista</h1>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="sign-in.html">Sign In</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <sectio id="home" class="hero" >
+        <div class="container">
+            <h2>Welcome to VitalVista!</h2>
+            <p>Discover a world of knowledge on health, beauty, psychology, and social life.</p>
+        </div>
+    </sectio>
+    <section class="search-bar">
+        <div class="container">
+            <input type="text" placeholder="Search for health tips">
+            <button type="button">Search</button>
+        </div>
+    </section>
+
+    <section id="diseases" class="disease-list">
+            <div class="row">
+                <!-- Maintain Health Box -->
+                <div class="col-12 col-md-4 mb-3">
+                    <div class="disease-box" id="maintain-health" onclick="window.location.href='maintain-health.html'">
+                        <div class="overlay"></div>
+                        <h2>Maintain Health</h2>
+                    </div>
+                </div>
+
+                <!-- About Disease Box -->
+                <div class="col-12 col-md-4 mb-3">
+                    <div class="disease-box" id="about-disease" onclick="window.location.href='about disease.html'">
+                        <div class="overlay"></div>
+                        <h2>About Disease</h2>
+                    </div>
+                </div>
+
+                <!-- Psychology Box -->
+                <div class="col-12 col-md-4 mb-3">
+                    <div class="disease-box" id="psychology" onclick="window.location.href='psychology.html'">
+                        <div class="overlay"></div>
+                        <h2>Psychology</h2>
+                    </div>
+                </div>
+
+
+                
+                <!-- Beauty Box -->
+                <div class="col-12 col-md-6 mb-3">
+                    <div class="disease-box" id="beauty" onclick="window.location.href='beauty.html'">
+                        <div class="overlay"></div>
+                        <h2>Beauty</h2>
+                    </div>
+                </div>
+
+                <!-- Communication and Social Life Box -->
+                <div class="col-12 col-md-6 mb-3">
+                    <div class="disease-box" id="communication"onclick="window.location.href='communication.html'">
+                        <div class="overlay"></div>
+                        <h2>Communication and Social Life</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Welcome to VitalVista! We are dedicated to providing comprehensive information on various aspects of health, beauty, psychology, and social life.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form action="submit_form.php" method="post">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Send Message</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 VitalVista. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function startBackgroundImageSlider(elementId, images, interval) {
+            const element = document.getElementById(elementId);
+            let currentIndex = 0;
+            
+            function changeBackgroundImage() {
+                element.style.backgroundImage = `url('images/${images[currentIndex]}')`;
+                currentIndex = (currentIndex + 1) % images.length;
+            }
+            
+            changeBackgroundImage(); // Initial call to set the first image
+            setInterval(changeBackgroundImage, interval);
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            startBackgroundImageSlider('maintain-health', ['mh1.jfif', 'mh2.jfif', 'mh3.jfif', 'mh4.jfif', 'mh5.jfif'], 60000);
+            startBackgroundImageSlider('about-disease', ['disease1.jfif', 'ad2.jfif', 'ad3.jfif', 'ad4.jfif', 'ad5.jfif'], 60000);
+            startBackgroundImageSlider('psychology', ['p1.jfif', 'p2.jfif', 'p3.jfif', 'p4.jfif', 'p5.jfif','p6.jpg'], 60000);
+            startBackgroundImageSlider('beauty', ['b1.jfif', 'b2.jfif', 'b3.jfif', 'b4.jfif', 'b5.jfif'], 60000);
+            startBackgroundImageSlider('communication', ['c1.jfif', 'c2.jfif', 'c3.jfif', 'c4.jfif', 'c5.jfif'], 60000);
+        });
+    </script>
+</body>
+</html>

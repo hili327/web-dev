@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sexual Diseases</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        .disease-list {
+            margin: 20px 0;
+        }
+
+        .disease {
+            cursor: pointer;
+            margin-bottom: 10px;
+            padding: 15px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .disease-details {
+            display: none;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .disease-details p {
+            margin: 0;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Sexual Diseases</h1>
+        <div class="disease-list">
+            <div class="disease" onclick="toggleDetails('disease1')">
+                <h3>1. Chlamydia</h3>
+                <div id="disease1" class="disease-details">
+                    <p><strong>Symptoms:</strong> Abnormal discharge, burning sensation during urination, pain during intercourse.</p>
+                    <p><strong>Causes:</strong> Bacterial infection caused by Chlamydia trachomatis.</p>
+                    <p><strong>Treatment:</strong> Antibiotics prescribed by a healthcare provider.</p>
+                </div>
+            </div>
+
+            <div class="disease" onclick="toggleDetails('disease2')">
+                <h3>2. Gonorrhea</h3>
+                <div id="disease2" class="disease-details">
+                    <p><strong>Symptoms:</strong> Painful urination, pus-like discharge, sore throat (if oral contact).</p>
+                    <p><strong>Causes:</strong> Bacterial infection caused by Neisseria gonorrhoeae.</p>
+                    <p><strong>Treatment:</strong> Antibiotics, usually a combination of medications.</p>
+                </div>
+            </div>
+
+            <div class="disease" onclick="toggleDetails('disease3')">
+                <h3>3. Syphilis</h3>
+                <div id="disease3" class="disease-details">
+                    <p><strong>Symptoms:</strong> Sores (chancre), rash, mucous membrane lesions, flu-like symptoms.</p>
+                    <p><strong>Causes:</strong> Bacterial infection caused by Treponema pallidum.</p>
+                    <p><strong>Treatment:</strong> Penicillin or other antibiotics as prescribed.</p>
+                </div>
+            </div>
+
+            <div class="disease" onclick="toggleDetails('disease4')">
+                <h3>4. Herpes Simplex Virus (HSV)</h3>
+                <div id="disease4" class="disease-details">
+                    <p><strong>Symptoms:</strong> Painful sores or blisters around the genital area, itching, and burning.</p>
+                    <p><strong>Causes:</strong> Viral infection caused by HSV-1 or HSV-2.</p>
+                    <p><strong>Treatment:</strong> Antiviral medications to reduce symptoms and frequency of outbreaks.</p>
+                </div>
+            </div>
+
+            <div class="disease" onclick="toggleDetails('disease5')">
+                <h3>5. Human Papillomavirus (HPV)</h3>
+                <div id="disease5" class="disease-details">
+                    <p><strong>Symptoms:</strong> Genital warts, itching, sometimes no visible symptoms.</p>
+                    <p><strong>Causes:</strong> Viral infection caused by human papillomavirus.</p>
+                    <p><strong>Treatment:</strong> Warts may be treated with topical medications or removed by a healthcare provider.</p>
+                </div>
+            </div>
+
+            <div class="disease" onclick="toggleDetails('disease6')">
+                <h3>6. Trichomoniasis</h3>
+                <div id="disease6" class="disease-details">
+                    <p><strong>Symptoms:</strong> Itching, discharge, discomfort during urination or sex.</p>
+                    <p><strong>Causes:</strong> Parasitic infection caused by Trichomonas vaginalis.</p>
+                    <p><strong>Treatment:</strong> Antibiotics, usually metronidazole or tinidazole.</p>
+                </div>
+            </div>
+
+            <div class="disease" onclick="toggleDetails('disease7')">
+                <h3>7. Hepatitis B</h3>
+                <div id="disease7" class="disease-details">
+                    <p><strong>Symptoms:</strong> Jaundice, abdominal pain, fatigue, nausea.</p>
+                    <p><strong>Causes:</strong> Viral infection caused by Hepatitis B virus (HBV).</p>
+                    <p><strong>Treatment:</strong> Antiviral medications, and in some cases, liver transplant.</p>
+                </div>
+            </div>
+
+            <div class="disease" onclick="toggleDetails('disease8')">
+                <h3>8. Hepatitis C</h3>
+                <div id="disease8" class="disease-details">
+                    <p><strong>Symptoms:</strong> Fatigue, jaundice, abdominal pain, nausea.</p>
+                    <p><strong>Causes:</strong> Viral infection caused by Hepatitis C virus (HCV).</p>
+                    <p><strong>Treatment:</strong> Antiviral medications, often a combination of drugs.</p>
+                </div>
+            </div>
+
+            <div class="disease" onclick="toggleDetails('disease9')">
+                <h3>9. Human Immunodeficiency Virus (HIV)</h3>
+                <div id="disease9" class="disease-details">
+                    <p><strong>Symptoms:</strong> Flu-like symptoms, weight loss, chronic diarrhea.</p>
+                    <p><strong>Causes:</strong> Viral infection caused by HIV.</p>
+                    <p><strong>Treatment:</strong> Antiretroviral therapy (ART) to manage symptoms and prolong life.</p>
+                </div>
+            </div>
+
+            <div class="disease" onclick="toggleDetails('disease10')">
+                <h3>10. Bacterial Vaginosis (BV)</h3>
+                <div id="disease10" class="disease-details">
+                    <p><strong>Symptoms:</strong> Abnormal discharge, fishy odor, itching.</p>
+                    <p><strong>Causes:</strong> Imbalance of bacteria in the vagina.</p>
+                    <p><strong>Treatment:</strong> Antibiotics, such as metronidazole or clindamycin.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleDetails(diseaseId) {
+            var details = document.getElementById(diseaseId);
+            details.style.display = details.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Diseases Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .disease {
+            margin-bottom: 20px;
+            cursor: pointer;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .disease-details {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #e0e0e0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .disease-details p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Mental Diseases Information</h1>
+
+    <div class="disease" onclick="toggleDetails('depressionDetails')">
+        <h2>Depression</h2>
+        <div id="depressionDetails" class="disease-details">
+            <p><strong>Symptoms:</strong> Persistent sadness, loss of interest or pleasure in activities, changes in appetite or weight, sleep disturbances, fatigue, feelings of worthlessness or guilt.</p>
+            <p><strong>Causes:</strong> Complex interaction of genetic, biological, environmental, and psychological factors.</p>
+            <p><strong>Treatment:</strong> Therapy (cognitive-behavioral therapy, psychotherapy), medications (antidepressants).</p>
+        </div>
+    </div>
+
+    <div class="disease" onclick="toggleDetails('alzheimersDetails')">
+        <h2>Alzheimer's Disease</h2>
+        <div id="alzheimersDetails" class="disease-details">
+            <p><strong>Symptoms:</strong> Memory loss, confusion, difficulty with language, changes in mood and behavior.</p>
+            <p><strong>Causes:</strong> Brain cell death and tissue loss.</p>
+            <p><strong>Treatment:</strong> Medications, management of symptoms, support for caregivers.</p>
+        </div>
+    </div>
+
+    <div class="disease" onclick="toggleDetails('anxietyDetails')">
+        <h2>Anxiety Disorders</h2>
+        <div id="anxietyDetails" class="disease-details">
+            <p><strong>Symptoms:</strong> Excessive worry, restlessness, fatigue, difficulty concentrating, irritability, muscle tension, sleep disturbances.</p>
+            <p><strong>Causes:</strong> Genetic and environmental factors, brain chemistry, life events.</p>
+            <p><strong>Treatment:</strong> Therapy (cognitive-behavioral therapy, exposure therapy), medications (antidepressants, anti-anxiety medications).</p>
+        </div>
+    </div>
+
+    <div class="disease" onclick="toggleDetails('bipolarDetails')">
+        <h2>Bipolar Disorder</h2>
+        <div id="bipolarDetails" class="disease-details">
+            <p><strong>Symptoms:</strong> Extreme mood swings, including emotional highs (mania or hypomania) and lows (depression).</p>
+            <p><strong>Causes:</strong> Genetics, neurotransmitter imbalances, environmental factors.</p>
+            <p><strong>Treatment:</strong> Medications (mood stabilizers, antipsychotics), psychotherapy.</p>
+        </div>
+    </div>
+
+    <div class="disease" onclick="toggleDetails('ocdDetails')">
+        <h2>Obsessive-Compulsive Disorder (OCD)</h2>
+        <div id="ocdDetails" class="disease-details">
+            <p><strong>Symptoms:</strong> Recurring, unwanted thoughts (obsessions) and repetitive behaviors (compulsions).</p>
+            <p><strong>Causes:</strong> Genetics, brain structure and function, environmental factors.</p>
+            <p><strong>Treatment:</strong> Therapy (cognitive-behavioral therapy), medications (SSRIs).</p>
+        </div>
+    </div>
+
+    <div class="disease" onclick="toggleDetails('ptsdDetails')">
+        <h2>Post-Traumatic Stress Disorder (PTSD)</h2>
+        <div id="ptsdDetails" class="disease-details">
+            <p><strong>Symptoms:</strong> Flashbacks, nightmares, severe anxiety, uncontrollable thoughts about the event.</p>
+            <p><strong>Causes:</strong> Exposure to traumatic events.</p>
+            <p><strong>Treatment:</strong> Therapy (cognitive-behavioral therapy), medications (antidepressants).</p>
+        </div>
+    </div>
+
+    <div class="disease" onclick="toggleDetails('schizophreniaDetails')">
+        <h2>Schizophrenia</h2>
+        <div id="schizophreniaDetails" class="disease-details">
+            <p><strong>Symptoms:</strong> Hallucinations, delusions, disorganized thinking, impaired functioning.</p>
+            <p><strong>Causes:</strong> Genetics, brain chemistry, environment.</p>
+            <p><strong>Treatment:</strong> Medications (antipsychotics), therapy, social support.</p>
+        </div>
+    </div>
+
+    <div class="disease" onclick="toggleDetails('adhdDetails')">
+        <h2>Attention Deficit Hyperactivity Disorder (ADHD)</h2>
+        <div id="adhdDetails" class="disease-details">
+            <p><strong>Symptoms:</strong> Inattention, hyperactivity, impulsivity.</p>
+            <p><strong>Causes:</strong> Genetics, brain function and structure.</p>
+            <p><strong>Treatment:</strong> Medications (stimulants, non-stimulants), therapy.</p>
+        </div>
+    </div>
+
+    <div class="disease" onclick="toggleDetails('eatingdisordersDetails')">
+        <h2>Eating Disorders</h2>
+        <div id="eatingdisordersDetails" class="disease-details">
+            <p><strong>Symptoms:</strong> Severe disturbances in eating behavior, preoccupation with food, body weight, and shape.</p>
+            <p><strong>Causes:</strong> Genetics, psychological factors, cultural and societal influences.</p>
+            <p><strong>Treatment:</strong> Therapy (cognitive-behavioral therapy), nutritional counseling, medications.</p>
+        </div>
+    </div>
+
+    <div class="disease" onclick="toggleDetails('dissociativeDetails')">
+        <h2>Dissociative Disorders</h2>
+        <div id="dissociativeDetails" class="disease-details">
+            <p><strong>Symptoms:</strong> Disruptions in identity, memory, or consciousness, such as dissociative identity disorder (DID) or dissociative amnesia.</p>
+            <p><strong>Causes:</strong> Trauma, stress, dissociation as a coping mechanism.</p>
+            <p><strong>Treatment:</strong> Therapy (psychotherapy, cognitive-behavioral therapy), medications for symptoms.</p>
+        </div>
+    </div>
+
+    <div class="disease" onclick="toggleDetails('paranoiaDetails')">
+        <h2>Paranoia</h2>
+        <div id="paranoiaDetails" class="disease-details">
+            <p><strong>Symptoms:</strong> Persistent and irrational mistrust or suspicion of others, often leading to distress or impaired functioning.</p>
+            <p><strong>Causes:</strong> May include genetic predisposition, stress, or other mental health disorders.</p>
+            <p><strong>Treatment:</strong> Therapy (psychotherapy, cognitive-behavioral therapy), medications for related symptoms.</p>
+        </div>
+    </div>
+
+    <div class="disease" onclick="toggleDetails('psychosisDetails')">
+        <h2>Psychosis</h2>
+        <div id="psychosisDetails" class="disease-details">
+            <p><strong>Symptoms:</strong> Loss of contact with reality, including hallucinations, delusions, disorganized thinking.</p>
+            <p><strong>Causes:</strong> Various mental health disorders, substance use, medical conditions.</p>
+            <p><strong>Treatment:</strong> Medications (antipsychotics), therapy (psychotherapy, cognitive-behavioral therapy), treatment of underlying conditions.</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleDetails(id) {
+            var details = document.getElementById(id);
+            if (details.style.display === 'none' || details.style.display === '') {
+                details.style.display = 'block';
+            } else {
+                details.style.display = 'none';
+            }
+        }
+    </script>
+
+</body>
+</html>
